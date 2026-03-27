@@ -350,7 +350,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.85);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -395,24 +395,23 @@
             color: #014f86;
             background: #eef2fa;
         }
-       .carta-img-real {
-    width: 100%;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 1.5rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    background: white;
-}
-
-.modal-content.carta-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-        video {
+        .carta-img-real {
             width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 1.5rem;
+            background: white;
+        }
+        .modal-content.carta-modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
             border-radius: 1rem;
-            outline: none;
+            border: none;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -441,6 +440,9 @@
             }
             .nav-btn i {
                 margin: 0;
+            }
+            iframe {
+                height: 250px;
             }
         }
     </style>
@@ -500,7 +502,7 @@
             <div class="grid-cards">
                 <!-- Carta con modal -->
                 <div class="card-modern"><i class="fas fa-envelope-open-text"></i><h3>Carta problemática</h3><p>Leemos la carta que nos introduce al reto "Científicos del agua".</p><span class="badge-time"><i class="far fa-clock"></i> Temporalización 5 min</span><button onclick="mostrarCarta()" class="btn-recurso"><i class="fas fa-file-alt"></i> Ver carta</button></div>
-                <!-- Vídeo con modal local -->
+                <!-- Vídeo YouTube -->
                 <div class="card-modern"><i class="fas fa-video"></i><h3>Vídeo motivador</h3><p>¿Está limpia el agua que usamos cada día?</p><span class="badge-time"><i class="far fa-clock"></i> Temporalización 10 min</span><button onclick="mostrarVideo()" class="btn-recurso"><i class="fas fa-play"></i> Ver vídeo</button></div>
                 <!-- Lluvia de ideas Mentimeter -->
                 <div class="card-modern"><i class="fas fa-cloud-rain"></i><h3>Lluvia de ideas</h3><p>Compartimos ideas sobre cómo contaminamos el agua</p><span class="badge-time"><i class="far fa-clock"></i> Temporalización 10 min</span><a href="https://www.menti.com/alxpfnsq9voi" target="_blank" class="btn-recurso"><i class="fas fa-comments"></i> Participar Mentimeter</a></div>
@@ -546,7 +548,7 @@
         </div>
     </div>
 
-    <!-- PÁGINA 3: TEÓRICA (mismo contenido que antes) -->
+    <!-- PÁGINA 3: TEÓRICA -->
     <div id="page-theory" class="page">
         <div class="theory-container">
             <div class="theory-tabs">
@@ -561,7 +563,7 @@
             <div class="theory-content">
                 <div id="tab-destinatarios" class="theory-pane active-pane">
                     <h2><i class="fas fa-user-graduate"></i> Destinatarios</h2>
-                    <p style="margin-top:1rem;">Está dirigido a alumnos de <strong>4º y 5º de primaria</strong>, con edades comprendidas entre los 9 y 11 años, en el área de Ciencias Naturales. Se busca conectar con su curiosidad y su entorno cercano.</p>
+                    <p style="margin-top:1rem;">Está dirigido a alumnos de <strong>4º y 5º de primaria</strong>, con edades comprendidas entre los 9 y 11 años, en el área de Ciencias Naturales.</p>
                 </div>
                 <div id="tab-objetivo" class="theory-pane">
                     <h2><i class="fas fa-bullseye"></i> Objetivo de aprendizaje</h2>
@@ -572,82 +574,94 @@
                     <ul style="margin-top:1rem; list-style: none;"><li><i class="fas fa-check-circle"></i> Competencia en el conocimiento y la interacción con el mundo físico.</li><li><i class="fas fa-check-circle"></i> Competencia digital.</li><li><i class="fas fa-check-circle"></i> Competencia en conciencia y sostenibilidad ambiental.</li><li><i class="fas fa-check-circle"></i> Competencia social y cívica.</li><li><i class="fas fa-check-circle"></i> Competencia para aprender a aprender.</li></ul>
                 </div>
                 <div id="tab-contenidos" class="theory-pane"><h2>Contenidos trabajados</h2><div><p><strong>Conceptuales:</strong></p><ul class="contenidos-lista"><li>El agua como recurso natural.</li><li>Causas y consecuencias de la contaminación del agua.</li><li>Uso responsable y sostenible del agua.</li></ul><p><strong>Procedimentales:</strong></p><ul class="contenidos-lista"><li>Análisis de situaciones cotidianas.</li><li>Identificación de acciones contaminantes.</li><li>Elaboración de propuestas de mejora.</li></ul><p><strong>Actitudinales:</strong></p><ul class="contenidos-lista"><li>Responsabilidad ambiental.</li><li>Compromiso con el cuidado del entorno.</li><li>Trabajo cooperativo.</li></ul></div></div>
-               <div id="tab-dua" class="theory-pane">
+                <div id="tab-dua" class="theory-pane">
                     <h2>Aplicación del Diseño Universal para el Aprendizaje (DUA)</h2>
-                    <p>El diseño de este Recurso Educativo Abierto incorpora de manera planificada los principios del Diseño Universal para el Aprendizaje (DUA), con el propósito de garantizar la accesibilidad, la equidad y la participación activa de todo el alumnado. La propuesta contempla la diversidad de ritmos, estilos y necesidades educativas, ofreciendo múltiples formas de acceso a la información, de expresión del aprendizaje y de implicación en el proceso.</p>
+                    <p>El diseño de este Recurso Educativo Abierto incorpora de manera planificada los principios del Diseño Universal para el Aprendizaje (DUA)...</p>
                     <div class="sub-grid" style="margin-top: 1.5rem;">
-                        <div class="info-card"><i class="fas fa-eye"></i> <strong>Múltiples formas de representación</strong><br>Con el fin de facilitar la comprensión del contenido, se emplean distintos formatos de presentación de la información:<br>• Recursos audiovisuales breves que contextualizan la problemática.<br>• Imágenes y situaciones visuales que permiten identificar acciones contaminantes.<br>• Textos estructurados y adaptados a nivel de Educación Primaria.<br>• Actividades interactivas que favorecen la comprensión a través de la manipulación y la toma de decisiones.<br><br>Esta variedad de formatos permite que el alumnado acceda al contenido desde diferentes canales sensoriales y cognitivos, favoreciendo una comprensión más profunda del fenómeno de la contaminación del agua.</div>
-                        <div class="info-card"><i class="fas fa-pencil-ruler"></i> <strong>Múltiples formas de acción y expresión</strong><br>El recurso ofrece diversas alternativas para que el alumnado demuestre lo aprendido. En la fase de creación, los estudiantes pueden elegir entre distintos productos finales (cartel digital, vídeo, decálogo o campaña de sensibilización), lo que posibilita adaptar la expresión del aprendizaje a sus fortalezas individuales.<br><br>Asimismo, el trabajo cooperativo facilita que cada integrante asuma un rol acorde con sus capacidades (redacción, diseño, búsqueda de información, exposición oral), promoviendo la participación equitativa y la corresponsabilidad dentro del grupo.</div>
-                        <div class="info-card"><i class="fas fa-heart"></i> <strong>Múltiples formas de implicación</strong><br>La propuesta se estructura a partir de una narrativa gamificada que sitúa al alumnado en el rol de “científicos del agua”. Esta estrategia fomenta la motivación intrínseca al plantear un reto significativo vinculado con su entorno cercano.<br><br>El planteamiento parte de situaciones cotidianas reconocibles, lo que favorece la conexión con la experiencia personal y la transferencia del aprendizaje. Además, el compromiso final individual refuerza la autorregulación y la toma de conciencia sobre la responsabilidad ambiental.<br><br>De este modo, el DUA no se limita a un planteamiento teórico, sino que se concreta en decisiones metodológicas que buscan garantizar la participación real de todo el alumnado.</div>
+                        <div class="info-card"><i class="fas fa-eye"></i> <strong>Múltiples formas de representación</strong><br>Recursos audiovisuales, imágenes, textos estructurados, actividades interactivas.</div>
+                        <div class="info-card"><i class="fas fa-pencil-ruler"></i> <strong>Múltiples formas de acción y expresión</strong><br>Productos finales variados, trabajo cooperativo, roles adaptados.</div>
+                        <div class="info-card"><i class="fas fa-heart"></i> <strong>Múltiples formas de implicación</strong><br>Narrativa gamificada, reto significativo, compromiso personal.</div>
                     </div>
                 </div>
                 <div id="tab-ods" class="theory-pane">
                     <h2>Objetivos de Desarrollo Sostenible (ODS)</h2>
-                    <p>El REA se centra en concreto en tres de los ODS:</p>
+                    <p>El REA se centra en tres ODS:</p>
                     <div class="sub-grid" style="margin-top: 1rem;">
-                        <div class="info-card"><strong>ODS 6 - Agua limpia y saneamiento.</strong><br>Se tratan aspectos relacionados con la contaminación del agua y cómo evitarlo.</div>
-                        <div class="info-card"><strong>ODS 13 - Acción por el clima</strong> y <strong>ODS 12 - Producción y consumo responsable.</strong><br>Se trabaja el cuidado del agua y su consumo responsable, por ejemplo, tratando de no desperdiciar el agua.</div>
+                        <div class="info-card"><strong>ODS 6 - Agua limpia y saneamiento.</strong><br>Contaminación del agua y cómo evitarla.</div>
+                        <div class="info-card"><strong>ODS 13 - Acción por el clima</strong> y <strong>ODS 12 - Producción y consumo responsable.</strong><br>Cuidado del agua y consumo responsable.</div>
                     </div>
                 </div>
                 <div id="tab-evaluacion" class="theory-pane">
                     <h2>Evaluación</h2>
                     <p><strong>Instrumentos de evaluación:</strong></p>
-                    <p><strong>Rúbrica</strong> - Se utilizará para evaluar el producto final elaborado por el alumnado, permitiendo valorar tanto la comprensión conceptual como la calidad de la propuesta de mejora y el grado de participación cooperativa.</p>
+                    <p><strong>Rúbrica</strong> - Evalúa producto final.</p>
                     <div class="rubric-table">
-                        <table>
-                            <thead><tr><th>Criterio</th><th>Nivel Alto</th><th>Nivel Medio</th><th>Nivel básico</th></tr></thead>
-                            <tbody>
-                                <tr><td>Comprensión del problema</td><td>Explica claramente cómo se contamina el agua y sus consecuencias</td><td>Identifica causas pero con explicaciones limitadas</td><td>Presenta ideas poco claras o incompletas</td></tr>
-                                <tr><td>Propuesta de mejora</td><td>Propone acciones realistas y aplicables</td><td>Propone acciones generales</td><td>Propuestas poco concretas</td></tr>
-                                <tr><td>Creatividad y claridad</td><td>Producto atractivo, organizado y comprensible</td><td>Producto adecuado pero mejorable</td><td>Producto poco estructurado</td></tr>
-                                <tr><td>Trabajo cooperativo</td><td>Participación equilibrada del grupo</td><td>Participación parcial</td><td>Participación desigual</td></tr>
-                            </tbody>
-                        </table>
+                        <table><thead><tr><th>Criterio</th><th>Nivel Alto</th><th>Nivel Medio</th><th>Nivel básico</th></tr></thead>
+                        <tbody>
+                            <tr><td>Comprensión del problema</td><td>Explica claramente contaminación y consecuencias</td><td>Identifica causas con explicaciones limitadas</td><td>Ideas poco claras</td></tr>
+                            <tr><td>Propuesta de mejora</td><td>Acciones realistas y aplicables</td><td>Propuestas generales</td><td>Poco concretas</td></tr>
+                            <tr><td>Creatividad y claridad</td><td>Producto atractivo y organizado</td><td>Adecuado pero mejorable</td><td>Poco estructurado</td></tr>
+                            <tr><td>Trabajo cooperativo</td><td>Participación equilibrada</td><td>Participación parcial</td><td>Desigual</td></tr>
+                        </tbody>
+                        佛罗
                     </div>
-                    <p><strong>Lista de cotejo</strong> - La lista de cotejo se utilizará como instrumento de evaluación formativa durante el desarrollo de las actividades, permitiendo al docente registrar el progreso individual y grupal del alumnado.</p>
+                    <p><strong>Lista de cotejo</strong> - Registro del progreso individual y grupal.</p>
                     <div class="checklist-table">
-                        <table>
-                            <thead><tr><th>Indicador</th><th>Sí</th><th>En proceso</th><th>No</th></tr></thead>
-                            <tbody>
-                                <tr><td>Participa activamente en las misiones propuestas</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Identifica correctamente acciones que contaminan el agua</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Explica la relación causa-consecuencia</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Aporta ideas en el trabajo cooperativo</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Respeta las opiniones del grupo</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Contribuye al producto final</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                            </tbody>
-                        </table>
+                         <table><thead><tr><th>Indicador</th><th>Sí</th><th>En proceso</th><th>No</th></tr></thead>
+                        <tbody>
+                            <tr><td>Participa activamente en las misiones</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Identifica acciones que contaminan</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Explica relación causa-consecuencia</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Aporta ideas en trabajo cooperativo</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Respeta opiniones del grupo</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Contribuye al producto final</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                        </tbody></table>
                     </div>
-                    <p><strong>Autoevaluación</strong> - La autoevaluación favorece la reflexión y la toma de conciencia sobre el propio aprendizaje, promoviendo la autorregulación y la transferencia de lo aprendido a la vida cotidiana.</p>
+                    <p><strong>Autoevaluación</strong></p>
                     <div style="background:#fef7e0; padding:0.8rem; border-radius:1rem; margin:1rem 0; display:inline-block;">
                         <span style="font-size:1.2rem; font-weight:500;">😊 = Sí &nbsp;&nbsp; 😐 = A veces &nbsp;&nbsp; 😕 = Todavía no</span>
                     </div>
                     <div class="autoeval-table">
-                        <table>
-                            <thead><tr><th>Ítem</th><th>😊</th><th>😐</th><th>😕</th></tr></thead>
-                            <tbody>
-                                <tr><td>He comprendido cómo se contamina el agua</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>Sé explicar cómo mis acciones pueden afectar al agua</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>He participado activamente en las actividades</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>He aportado ideas al trabajo en grupo</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>He respetado las opiniones de mis compañeros</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                                <tr><td>He aprendido algo que puedo aplicar en mi vida diaria</td><td>☐</td><td>☐</td><td>☐</td></tr>
-                            </tbody>
-                        </table>
+                        <table><thead><tr><th>Ítem</th><th>😊</th><th>😐</th><th>😕</th></tr></thead>
+                        <tbody>
+                            <tr><td>He comprendido cómo se contamina el agua</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>Sé explicar cómo mis acciones afectan al agua</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>He participado activamente</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>He aportado ideas al grupo</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>He respetado las opiniones</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                            <tr><td>He aprendido algo aplicable a mi vida</td><td>☐</td><td>☐</td><td>☐</td></tr>
+                        </tbody></table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER con NOMBRES COMPLETOS -->
+    <!-- FOOTER -->
     <div class="footer-names">
         <p>Proyecto Científicos del agua · Máster en Tecnología Educativa: E-Learning y Gestión del Conocimiento</p>
         <p>Curso 2025-2026 · Gerard Bonet Garsaball, MªRosario López Molina, Jordi Marcó Santacana, Estrella Navarro Peñaranda, Marta Rizo Jareño</p>
     </div>
 </div>
 
+<!-- MODAL CARTA -->
+<div id="modalCarta" class="modal">
+    <div class="modal-content carta-modal">
+        <span class="modal-close" onclick="cerrarCarta()">&times;</span>
+        <img class="carta-img-real" src="img/carta.png" alt="Carta de misión Científicos del Agua" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22700%22%3E%3Crect width=%22500%22 height=%22700%22 fill=%22%23f5e7d3%22/%3E%3Ctext x=%2250%22 y=%22100%22 font-size=%2220%22 fill=%22%23333%22%3ECarta no encontrada%3C/text%3E%3C/svg%3E'">
+    </div>
+</div>
+
+<!-- MODAL VÍDEO YOUTUBE -->
+<div id="modalVideo" class="modal">
+    <div class="modal-content video-modal">
+        <span class="modal-close" onclick="cerrarVideo()">&times;</span>
+        <iframe id="videoPlayer" width="100%" height="400" src="https://www.youtube.com/embed/oID8bic-emg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
 <script>
+    // Navegación entre páginas
     const navBtns = document.querySelectorAll('.nav-btn');
     const pages = document.querySelectorAll('.page');
     navBtns.forEach(btn => {
@@ -660,18 +674,51 @@
         });
     });
 
+    // Pestañas de la página teórica
     const tabBtns = document.querySelectorAll('.tab-btn');
     const panes = document.querySelectorAll('.theory-pane');
-    tabBtns.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.getAttribute('data-tab');
-            tabBtns.forEach(t => t.classList.remove('active-tab'));
-            tab.classList.add('active-tab');
-            panes.forEach(pane => pane.classList.remove('active-pane'));
-            document.getElementById(target).classList.add('active-pane');
+    if (tabBtns.length) {
+        tabBtns.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+                tabBtns.forEach(t => t.classList.remove('active-tab'));
+                tab.classList.add('active-tab');
+                panes.forEach(pane => pane.classList.remove('active-pane'));
+                document.getElementById(target).classList.add('active-pane');
+            });
         });
-    });
+    }
 
+    // Funciones para la carta
+    function mostrarCarta() {
+        document.getElementById('modalCarta').classList.add('active');
+    }
+    function cerrarCarta() {
+        document.getElementById('modalCarta').classList.remove('active');
+    }
+
+    // Funciones para el vídeo de YouTube
+    function mostrarVideo() {
+        const modal = document.getElementById('modalVideo');
+        modal.classList.add('active');
+    }
+    function cerrarVideo() {
+        const modal = document.getElementById('modalVideo');
+        const iframe = document.getElementById('videoPlayer');
+        modal.classList.remove('active');
+        // Reinicia el vídeo al cerrar
+        iframe.src = iframe.src;
+    }
+
+    // Cerrar modales al hacer clic fuera
+    window.onclick = function(event) {
+        const modalCarta = document.getElementById('modalCarta');
+        const modalVideo = document.getElementById('modalVideo');
+        if (event.target === modalCarta) cerrarCarta();
+        if (event.target === modalVideo) cerrarVideo();
+    }
+
+    // Funciones para la misión 3
     const fileInput = document.getElementById('file-mision');
     const fileListDiv = document.getElementById('file-list-mision');
     if(fileInput) {
@@ -698,33 +745,6 @@
             document.getElementById('insigniaFinal').style.display = 'block';
         } else alert('Escribe tu compromiso antes.');
     };
-<div id="modalVideo" class="modal">
-    <div class="modal-content video-modal">
-        <span class="modal-close" onclick="cerrarVideo()">&times;</span>
-
-        <iframe id="videoPlayer"
-            width="100%" height="400"
-            src="https://www.youtube.com/embed/oID8bic-emg"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-</div>
 </script>
-function mostrarVideo() {
-    document.getElementById("modalVideo").classList.add("active");
-}
-
-function cerrarVideo() {
-    const modal = document.getElementById("modalVideo");
-    const iframe = document.getElementById("videoPlayer");
-
-    modal.classList.remove("active");
-
-    // Reinicia el vídeo al cerrar
-    iframe.src = iframe.src;
-}
 </body>
 </html>
