@@ -701,10 +701,15 @@
 <div id="modalVideo" class="modal">
     <div class="modal-content video-modal">
         <span class="modal-close" onclick="cerrarVideo()">&times;</span>
-        <video controls id="videoPlayer">
-            <source src="vid/video-agua.mp4" type="video/mp4">
-            Tu navegador no soporta vídeo.
-        </video>
+
+        <iframe id="videoPlayer"
+            width="100%" height="400"
+            src="https://www.youtube.com/embed/oID8bic-emg"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+
     </div>
 </div>
 </script>
@@ -714,11 +719,12 @@ function mostrarVideo() {
 
 function cerrarVideo() {
     const modal = document.getElementById("modalVideo");
-    const video = document.getElementById("videoPlayer");
-    
+    const iframe = document.getElementById("videoPlayer");
+
     modal.classList.remove("active");
-    video.pause();
-    video.currentTime = 0;
+
+    // Reinicia el vídeo al cerrar
+    iframe.src = iframe.src;
 }
 </body>
 </html>
